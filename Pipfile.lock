@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "bc760170aded241aa6c8e60a7ca5cf4cfca79e20cfb17414421ada19a6f793ee"
+            "sha256": "43700aea8f7bd5311d8e6416e15c49bb5c6103d07012d166eba5313c24977a10"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -30,6 +30,21 @@
             ],
             "index": "pypi",
             "version": "==2.2.1"
+        },
+        "django-pandas": {
+            "hashes": [
+                "sha256:738cc03ffb411eef3eb02334d1f5a5d40697099a92ac59eb39629c08a9c2d6fb",
+                "sha256:788f4652012a67d2c5849191b01af58255f7af815ab612bebca019854235a9bc"
+            ],
+            "index": "pypi",
+            "version": "==0.6.1"
+        },
+        "djangorestframework": {
+            "hashes": [
+                "sha256:1d22971a5fc98becdbbad9710ca2a9148dd339f6cbea4c3ddbed2cb84bab94e1",
+                "sha256:2884763160b997073ff1e937bd820a69d23978902a3ccd0ba53a217e196239f0"
+            ],
+            "version": "==3.9.3"
         },
         "kiwisolver": {
             "hashes": [
@@ -158,6 +173,14 @@
                 "sha256:d747dd3d23d77ef44c6a3526e274af6efeb0a6f1afd5a69ba4d5be4098c8e141"
             ],
             "version": "==2019.1"
+        },
+        "rest-pandas": {
+            "hashes": [
+                "sha256:13796398565a08c668e0fd31861939df6d0f9cc859b1493308f7cc5c11ea247c",
+                "sha256:28238165223042d1618490b689fef04740dbdb63adb1ced58e4fbb8af87f63f6"
+            ],
+            "index": "pypi",
+            "version": "==1.1.0"
         },
         "scipy": {
             "hashes": [

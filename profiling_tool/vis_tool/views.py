@@ -1,5 +1,5 @@
 import pandas as pd
-from django.shortcuts import HttpResponse
+from django.shortcuts import HttpResponse, Http404
 from rest_pandas import PandasSimpleView, PandasView
 from rest_pandas.renderers import PandasHTMLRenderer, PandasCSVRenderer
 
@@ -8,7 +8,12 @@ from rest_pandas.renderers import PandasHTMLRenderer, PandasCSVRenderer
 
 class TimeSeriesView(PandasSimpleView):
     def get_data(self, request, *args, **kwargs):
-        return pd.read_csv('vis_tool/data/Cas.csv', dtype={'Accident_Index': str})
+        dataframe = request.GET.get("dataframe", None)
+        if dataframe is not None and dataframe.lower() in {"cas" "acc", "veh"}:
+            data = 'vis_tool/data/{}.csv'.format(dataframe.capitalize())
+        else:
+            data = 'vis_tool/data/Cas.csv'
+        return pd.read_csv(data, dtype={'Accident_Index': str})
 
     renderer_classes = [PandasHTMLRenderer]
     template_name = 'vis_tool/index.html'

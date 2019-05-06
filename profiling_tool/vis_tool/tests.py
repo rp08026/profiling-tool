@@ -11,3 +11,10 @@ class IndexViewTests(TestCase):
         """
         response = self.client.get(reverse('index'))
         self.assertEqual(response.status_code, 200)
+
+    def test_dataframes(self):
+        """
+        Check if dataframe option works
+        """
+        response = self.client.get(reverse('index'), {'dataframe': 'acc'})
+        self.assertEqual(response.status_code, 200)

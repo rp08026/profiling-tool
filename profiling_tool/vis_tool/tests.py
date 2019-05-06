@@ -18,3 +18,18 @@ class IndexViewTests(TestCase):
         """
         response = self.client.get(reverse('index'), {'dataframe': 'acc'})
         self.assertEqual(response.status_code, 200)
+
+    def test_column(self):
+        """
+        Check if columns option works
+        """
+        response = self.client.get(reverse('index'), {'columnns': 'Accident_Index'})
+
+        self.assertEqual(response.status_code, 200)
+
+    def test_columns(self):
+        """
+        Check if columns option works
+        """
+        response = self.client.get(reverse('index'), {'columnns': 'Accident_Index,Vehicle_Reference'})
+        self.assertEqual(response.status_code, 200)

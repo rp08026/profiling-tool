@@ -12,6 +12,7 @@ pandas = "*"
 scipy = "*"
 numpy = "*"
 matplotlib = "*"
+django = "*"
 
 [requires]
 python_version = "3.5"
